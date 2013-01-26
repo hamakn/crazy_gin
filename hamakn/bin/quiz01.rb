@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 $:.unshift("./lib")
 require "crazy_gin"
 

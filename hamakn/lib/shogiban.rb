@@ -1,6 +1,9 @@
 # coding: utf-8
 
 class Shogiban
+  class OutOfRangeError < StandardError
+  end
+
   def initialize(data)
     # 入力の改行は無視する、将棋盤なので横は9文字とする
     @size = 9
@@ -9,12 +12,12 @@ class Shogiban
   end
 
   def at(h, w)
-    raise "Out of Range" if h < 0 || w < 0 || h >= @size || w >= @size
+    raise OutOfRangeError if h < 0 || w < 0 || h >= @size || w >= @size
     @pixel[h][w]
   end
 
   def set(h, w, item)
-    raise "Out of Range" if h < 0 || w < 0 || h >= @size || w >= @size
+    raise OutOfRangeError if h < 0 || w < 0 || h >= @size || w >= @size
     @pixel[h][w] = item
   end
 
