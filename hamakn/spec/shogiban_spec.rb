@@ -1,4 +1,5 @@
 $:.unshift("./lib")
+require "rational"
 require "shogiban"
 
 describe Shogiban do

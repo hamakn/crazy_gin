@@ -1,4 +1,5 @@
 # coding: utf-8
+require "rational"
 require File.expand_path(File.join(__FILE__, "../shogiban"))
 
 module CrazyGin
